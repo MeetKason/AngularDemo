@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 11,
+        "name": "站点1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.935434,
+          38.064667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.781935,
+          37.903355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.864588,
+          37.737019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.474939,
+          37.632674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.348992,
+          37.859864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.30373,
+          38.064667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.781935,
+          37.903355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.923921,
+          37.875399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.579239,
+          37.957682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.781935,
+          37.903355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.571368,
+          37.867632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.949504,
+          38.132808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "temp": 0,
+        "name": "站点13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.594983,
+          37.791469
+        ]
+      }
+    }
+  ]
+}

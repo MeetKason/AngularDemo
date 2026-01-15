@@ -1,0 +1,14 @@
+<div class="navbar">
+  <div class="navbar-left">
+    <div class="navbar-left-logo">
+      <img src="/icon.png" alt="logo" width="40" height="40" style="margin: 12px;">
+    </div>
+    <div class="navbar-title">
+      数智气象可视化服务系统
+    </div>
+  </div>
+  <div class="navbar-right">
+    <nz-switch (ngModelChange)="onSwitchChangeBoundary($event)" [(ngModel)]="switchValue" [ngModel]="true" nzCheckedChildren="白色" nzUnCheckedChildren="暗色"></nz-switch>
+    {{ getFormattedTime() }}
+  </div>
+</div>

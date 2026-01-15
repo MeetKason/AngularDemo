@@ -1,0 +1,130 @@
+.ranking-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  color: var(--text-color) !important;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.filter-select {
+  flex: 1;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.time-btn,
+.type-btn {
+  flex: 1;
+  padding: 4px 12px;
+  border: 1px solid #d9d9d9;
+  background: var(--bg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.time-btn:hover,
+.type-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.time-btn.active,
+.type-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.ranking-table thead {
+  background: var(--table-header-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ranking-table th {
+  padding: 8px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-color);
+  border-bottom: 1px solid #e8e8e8;
+  background: var(--table-header-bg-color);
+}
+
+.ranking-table td {
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.ranking-table tbody tr {
+  background: var(--bg-color);
+}
+
+.ranking-table tbody tr:hover {
+  background: var(--active-color);
+}
+
+/* 第1名 - 红色 */
+.ranking-table tbody tr.rank-1 td {
+  color: #ff4d4f !important;
+  font-weight: 500;
+}
+
+/* 第2名 - 橙色 */
+.ranking-table tbody tr.rank-2 td {
+  color: #ff7a45 !important;
+  font-weight: 500;
+}
+
+/* 第3名 - 蓝色 */
+.ranking-table tbody tr.rank-3 td {
+  color: #1890ff !important;
+  font-weight: 500;
+}
+
+
+

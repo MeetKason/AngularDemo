@@ -1,3 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import '../node_modules/leaflet/dist/leaflet.css';
+@import '../node_modules/ng-zorro-antd/ng-zorro-antd.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* 默认浅色主题 */
+:root {
+  --primary-color: #43AEFE;
+  --bg-color: #ffffff;
+  --text-color: #061A29;
+  --map-filter: none;
+  --popup-title-color: #fff;
+  --active-color: rgba(48,136,218,0.24);
+  --icon-color: #061A29;
+  --table-header-bg-color: #e6f7ff;
+}
+
+/* 深色主题 */
+.dark-theme {
+  --primary-color: #3088DA;
+  --bg-color: #2F353A;
+  --text-color: #ffffff;
+  --popup-title-color: #fff;
+  /* 之前讨论的天地图深色滤镜 */
+  --map-filter: invert(100%) hue-rotate(180deg) brightness(95%);
+  --active-color:  rgba(48,136,218,0.24);
+  --icon-color: #ffffff;
+  --table-header-bg-color: #2F353A;
+}
+
+

@@ -1,0 +1,34 @@
+<div class="forecast-container">
+  <nz-card class="forecast-card seven-day" [nzBordered]="false">
+    <div class="forecast-title">
+      <span style="font-size: 20px; color: var(--primary-color);">
+        {{ location }} &nbsp;
+      </span>
+      <span style="font-size: 16px; color: var(--text-color);">未来七天预报</span>
+    </div>
+    <div class="seven-day-list">
+      <div *ngFor="let day of sevenDayForecast" class="day-item">
+        <div class="day-date">{{ day.date }}</div>
+        <div class="day-name">{{ day.day }}</div>
+        <div class="day-icon">
+          <img [src]="day.icon" [alt]="day.condition" class="day-icon-img">
+        </div>
+        <div class="day-condition">{{ day.condition }}</div>
+        <div class="day-temp">{{ day.high }}/{{ day.low }}°C</div>
+      </div>
+    </div>
+  </nz-card>
+
+  <nz-card class="forecast-card hourly" [nzBordered]="false">
+    <div class="forecast-title">
+      <span style="font-size: 20px; color: var(--primary-color);">
+        {{ location }} &nbsp;
+      </span>
+      <span style="font-size: 16px; color: var(--text-color);">未来24小时预报</span>
+    </div>
+    <div class="hourly-chart">
+      <div #chartContainer class="chart-container"></div>
+    </div>
+  </nz-card>
+</div>
+

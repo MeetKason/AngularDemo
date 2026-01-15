@@ -1,0 +1,133 @@
+.weather-section {
+  position: absolute;
+  left: 100px;
+  top: 80px;
+  z-index: 1000;
+}
+
+.weather-card {
+  background: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 320px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 顶部：位置和标题 */
+.header-section {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.location-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+.title-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* 中间：温度和天气信息 */
+.main-section {
+  margin-bottom: 20px;
+}
+
+.temperature-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.temperature-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.temperature {
+  font-size: 56px;
+  font-weight: bold;
+  color: var(--text-color);
+  line-height: 1;
+}
+
+.weather-icon-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.weather-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.condition-text {
+  font-size: 14px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.update-time {
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 0;
+}
+
+/* 底部：详细指标网格 */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.detail-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* 默认模式：黑色 */
+  filter:  brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(195deg) brightness(98%) contrast(86%) !important;
+}
+
+/* dark模式下：白色 */
+/* ::ng-deep .dark-theme .detail-icon {
+  filter: brightness(0) invert(1);
+} */
+
+.detail-label {
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+

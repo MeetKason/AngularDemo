@@ -1,0 +1,55 @@
+<div class="radar-player">
+  <!-- 播放/暂停按钮 -->
+  <button class="play-button" (click)="togglePlay()" [class.playing]="isPlaying">
+    <svg *ngIf="!isPlaying" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M4 2L12 8L4 14V2Z" fill="white"/>
+    </svg>
+    <svg *ngIf="isPlaying" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <rect x="4" y="2" width="3" height="12" fill="white"/>
+      <rect x="9" y="2" width="3" height="12" fill="white"/>
+    </svg>
+  </button>
+
+  <!-- 时间轴容器 -->
+  <div class="timeline-container">
+    <!-- 进度条 -->
+    <div class="progress-bar" [style.width.%]="getProgressPercent()"></div>
+
+    <!-- 时间轴轨道 -->
+    <div class="timeline-track">
+      <!-- 时间刻度标记 -->
+      <div
+        *ngFor="let time of timePoints; let i = index"
+        class="time-tick"
+        [style.left.%]="(i / (timePoints.length - 1)) * 100"
+        [class.major]="i % 5 === 0"
+      >
+        <div class="tick-mark"></div>
+        <div class="time-label" *ngIf="i % 5 === 0">
+          {{ formatTime(time) }}
+        </div>
+      </div>
+    </div>
+
+    <!-- 滑块 -->
+    <input
+      type="range"
+      class="time-slider"
+      [min]="0"
+      [max]="getMaxIndex()"
+      [value]="currentIndex"
+      (input)="onSliderChange(+$any($event.target).value)"
+      (mousedown)="pause()"
+      step="1"
+    />
+
+    <!-- 当前时间工具提示 -->
+    <div
+      class="time-tooltip"
+      [style.left.%]="getProgressPercent()"
+      *ngIf="getCurrentTime()"
+    >
+      {{ getCurrentTime() }}
+    </div>
+  </div>
+</div>

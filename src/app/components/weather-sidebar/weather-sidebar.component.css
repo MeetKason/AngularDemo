@@ -1,0 +1,188 @@
+.weather-sidebar {
+  width: 80px;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  background: transparent;
+  border-radius: 6px;
+}
+
+/* 顶部组：单选按钮组 */
+.selection-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 6px;
+  background: var(--bg-color);
+
+}
+
+.selection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  /* border-radius: 6px; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color) !important;
+}
+
+.selection-item:hover {
+  background: var(--active-color);
+}
+
+.selection-item.active {
+  background: var(--active-color);
+}
+
+.selection-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-color);
+}
+
+.selection-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  color: var(--text-color) !important;
+  /* 默认模式：黑色 */
+  filter: brightness(0);
+}
+
+/* dark模式下：白色 */
+::ng-deep .dark-theme .selection-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* 选中时：蓝色 #1890ff（优先级高于默认和dark模式） */
+.selection-item.active .selection-icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(195deg) brightness(98%) contrast(86%) !important;
+}
+
+.selection-name {
+  font-size: 12px;
+  color: var(--text-color) ;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.selection-item.active .selection-name {
+  color: #1890ff;
+  font-weight: 500;
+}
+
+/* 中间组和底部组：开关组 */
+.toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 6px;
+  background: var(--bg-color);
+}
+
+.toggle-group.bottom-group {
+  margin-top: auto;
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px;
+  background: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.toggle-item:hover {
+  background: var(--active-color);
+}
+
+.toggle-item.active {
+  background: var(--active-color);
+}
+
+.toggle-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  color: var(--text-color);
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  color: var(--icon-color) !important;
+  /* 默认模式：黑色 */
+  filter: brightness(0);
+}
+
+/* dark模式下：白色 */
+::ng-deep .dark-theme .toggle-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* 选中时：蓝色 #1890ff（优先级高于默认和dark模式） */
+.toggle-item.active .toggle-icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(195deg) brightness(98%) contrast(86%) !important;
+}
+
+.toggle-name {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.toggle-item.active .toggle-name {
+  color: #1890ff;
+  font-weight: 500;
+}
+
+/* 开关样式 */
+.toggle-switch {
+  width: 32px;
+  height: 18px;
+  background: #d9d9d9;
+  border-radius: 9px;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.toggle-switch.on {
+  background: #1890ff;
+}
+
+.toggle-switch-handle {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.on .toggle-switch-handle {
+  left: 16px;
+}
+
+
+
+

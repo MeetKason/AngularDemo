@@ -1,0 +1,48 @@
+<div class="weather-section">
+  <div class="weather-card">
+    <!-- 顶部：位置和标题 -->
+    <div class="header-section">
+      <span class="location-text">{{ currentWeather.location }}</span>
+      <span class="title-text">天气实况</span>
+    </div>
+
+    <!-- 中间：温度和天气信息 -->
+    <div class="main-section">
+      <div class="temperature-section">
+        <div class="temperature-wrapper">
+          <div class="temperature">{{ currentWeather.temperature }}</div>
+          <div class="update-time">数据更新时间:{{ currentWeather.updateTime }}</div>
+        </div>
+        <div class="weather-icon-section">
+          <img [src]="getWeatherIcon()" alt="weather" class="weather-icon">
+          <div class="condition-text">{{ currentWeather.condition }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部：详细指标网格 -->
+    <div class="details-grid">
+      <div class="grid-item">
+        <img src="/assets/image/rainfall.png" alt="precipitation" class="detail-icon">
+        <div class="detail-label">降水</div>
+        <div class="detail-value">{{ currentWeather.precipitation }}</div>
+      </div>
+      <div class="grid-item">
+        <img src="/assets/image/Wind.png" alt="wind" class="detail-icon">
+        <div class="detail-label">{{ getWindDirection() }}</div>
+        <div class="detail-value">{{ getWindLevel() }}</div>
+      </div>
+      <div class="grid-item">
+        <img src="/assets/image/humidity.png" alt="humidity" class="detail-icon">
+        <div class="detail-label">湿度</div>
+        <div class="detail-value">{{ currentWeather.humidity }}</div>
+      </div>
+      <div class="grid-item">
+        <img src="/assets/image/visibility.png" alt="visibility" class="detail-icon">
+        <div class="detail-label">能见度</div>
+        <div class="detail-value">{{ currentWeather.visibility }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

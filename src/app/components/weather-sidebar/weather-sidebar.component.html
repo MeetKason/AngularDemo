@@ -1,0 +1,50 @@
+<div class="weather-sidebar">
+  <!-- 顶部组：单选按钮组（温度、降水、雷达回波、卫星） -->
+  <div class="selection-group">
+    <div
+      *ngFor="let param of weatherParams"
+      class="selection-item"
+      [class.active]="param.active"
+      (click)="toggleParam(param)">
+      <div class="selection-item-content">
+        <img [src]="getIcon(param)" class="selection-icon">
+        <div class="selection-name">{{ param.name }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中间组：开关组（风流场、实观测值、站点名称） -->
+  <div class="toggle-group">
+    <div
+      *ngFor="let condition of weatherConditions"
+      class="toggle-item"
+      [class.active]="condition.active"
+      (click)="toggleCondition(condition)">
+      <div class="toggle-item-content">
+        <img [src]="condition.icon" [alt]="condition.name" class="toggle-icon">
+        <div class="toggle-name">{{ condition.name }}</div>
+        <div class="toggle-switch" [class.on]="condition.active">
+          <div class="toggle-switch-handle"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 底部组：单个开关（色斑图） -->
+  <!-- <div class="toggle-group bottom-group">
+    <div
+      class="toggle-item"
+      [class.active]="colorMap.active"
+      (click)="toggleColorMap()">
+      <div class="toggle-item-content">
+        <img [src]="colorMap.icon" [alt]="colorMap.name" class="toggle-icon">
+        <div class="toggle-name">{{ colorMap.name }}</div>
+      </div>
+      <div class="toggle-switch" [class.on]="colorMap.active">
+        <div class="toggle-switch-handle"></div>
+      </div>
+    </div>
+  </div> -->
+</div>
+

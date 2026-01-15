@@ -1,0 +1,161 @@
+.forecast-container {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.forecast-card {
+  flex: 1;
+  height: 100%;
+  border-radius: 8px;
+  color: var(--text-color) !important;
+  background: var(--bg-color) !important;
+
+}
+
+.forecast-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  white-space: nowrap;    /* 1. 强制文字在一行内显示，禁止换行 */
+  overflow: hidden;       /* 2. 隐藏超出容器范围的内容 */
+  text-overflow: ellipsis; /* 3. 当内容溢出时显示省略号 (...) */
+}
+.seven-day{
+  max-width: 566px;
+  min-width: 500px;
+  background: var(--bg-color);
+  overflow: hidden;
+}
+
+.seven-day-list {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+.day-item {
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
+  background: var(--bg-color);
+  border-radius: 4px;
+}
+
+.day-item:hover {
+  background: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  .day-temp {
+    color: var(--text-color);
+  }
+  .day-date {
+    color: var(--text-color);
+  }
+  .day-name {
+    color: var(--text-color);
+  }
+  .day-icon {
+    color: var(--text-color);
+  }
+}
+
+.day-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.day-name {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.day-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.day-condition {
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.day-temp {
+  font-size: 14px;
+  color: #1890ff;
+  font-weight: 500;
+}
+
+.hourly-chart {
+  position: relative;
+  width: 100%;
+  height: 125px;
+  min-height: 125px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  min-height: 125px;
+}
+
+.chart-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.temp-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hourly-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hourly-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.hour-temp {
+  position: absolute;
+  font-size: 11px;
+  color: var(--primary-color);
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.hour-icon {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.hour-time {
+  font-size: 11px;
+  color: var(--text-color);
+  margin-top: 4px;
+}
+

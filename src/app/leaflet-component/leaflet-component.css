@@ -1,0 +1,119 @@
+#map { height: 100vh; width: 100%;}
+.leaflet{
+  height: 100%;
+}
+.leaflet-container{
+  /*left: 300px;*/
+  position: absolute;
+  z-index: 9999;
+}
+
+/* 温度文字样式 */
+::ng-deep .temperature-label {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333; /* 默认黑色 */
+  text-shadow: 1px 1px 1px #fff; /* 文字白边，防止在深色背景下看不清 */
+  white-space: nowrap;
+}
+
+/* 高温文字颜色 */
+::ng-deep .temp-high {
+  color: #ff4d4f; /* 红色 */
+}
+
+/* 低温文字颜色 */
+::ng-deep .temp-low {
+  color: #1890ff; /* 蓝色 */
+}
+
+::ng-deep .temp-value {
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
+  white-space: nowrap;
+}
+
+::ng-deep .leaflet-popup-content {
+  margin: 0;
+  width: auto !important;
+  min-width: auto !important;
+}
+
+::ng-deep .my-custom-popup .leaflet-popup-content-wrapper {
+  width: auto !important;
+  max-width: none !important;
+  min-width: auto !important;
+}
+
+::ng-deep .my-custom-popup .leaflet-popup-content {
+  width: auto !important;
+  min-width: auto !important;
+}
+
+::ng-deep .custom-popup {
+  margin: 13px 24px 13px 20px;
+  .popup-title{
+    width: fit-content;
+    background: #1890ff;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 0 20px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+
+
+/* 深色主题 (暗黑模式) */
+.dark-theme-map  {
+  /* 选项1: 当前设置（完整参数） */
+  filter: invert(100%) hue-rotate(180deg) brightness(100%) contrast(110%);
+
+  /* 选项2: 简化版本（brightness 和 contrast 100% 可以省略） */
+  /* filter: invert(100%) hue-rotate(180deg); */
+
+  /* 选项3: 更柔和的暗色主题 */
+  /* filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(110%); */
+
+  /* 选项4: 增强对比度的暗色主题 */
+  /* filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(115%); */
+}
+
+/* 雷达图层pane不受filter影响 */
+::ng-deep .leaflet-radar-pane {
+  filter: none !important;
+}
+
+/* 确保雷达图片不受父容器filter影响 */
+::ng-deep .leaflet-radar-pane img {
+  filter: none !important;
+}
+
+/* 如果上面的选择器不起作用，使用更通用的方式 */
+::ng-deep .dark-theme-map .leaflet-radar-pane {
+  filter: none !important;
+}
+
+::ng-deep .dark-theme-map .leaflet-radar-pane img {
+  filter: none !important;
+}
+
+/* 蓝色主题 (大屏常用) */
+.blue-theme-map  {
+  filter: invert(100%) hue-rotate(200deg) brightness(80%) contrast(120%) saturate(150%);
+}
+
+/* 灰度主题 */
+.grey-theme-map {
+  filter: grayscale(100%) brightness(1.2);
+}
+
+

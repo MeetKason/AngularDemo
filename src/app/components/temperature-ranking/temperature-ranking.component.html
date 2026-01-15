@@ -1,0 +1,60 @@
+<nz-card class="ranking-card" [nzBordered]="false">
+  <div class="card-header">
+    <h3>气温分布排行</h3>
+  </div>
+
+  <div class="filters">
+    <div class="filter-item">
+      <label>区域切换:</label>
+      <nz-select [(ngModel)]="selectedRegion" class="filter-select">
+        <nz-option nzValue="太原市" nzLabel="太原市"></nz-option>
+        <nz-option nzValue="鹰潭市" nzLabel="鹰潭市"></nz-option>
+      </nz-select>
+    </div>
+
+    <div class="filter-buttons">
+      <button
+        *ngFor="let time of timeOptions"
+        class="time-btn"
+        [class.active]="selectedTime === time"
+        (click)="selectedTime = time">
+        {{ time }}
+      </button>
+    </div>
+
+    <div class="filter-buttons">
+      <button
+        *ngFor="let type of dataTypeOptions"
+        class="type-btn"
+        [class.active]="selectedDataType === type"
+        (click)="selectedDataType = type">
+        {{ type }}
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="ranking-table">
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>站点名称</th>
+          <th>站点ID</th>
+          <th>温度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let station of stations"
+            [class.rank-1]="station.rank === 1"
+            [class.rank-2]="station.rank === 2"
+            [class.rank-3]="station.rank === 3">
+          <td>{{ station.rank | number:'2.0-0' }}</td>
+          <td>{{ station.name }}</td>
+          <td>{{ station.id }}</td>
+          <td>{{ station.temperature }}°C</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</nz-card>
+

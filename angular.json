@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "a764c6cb-30c5-4b79-a307-2efc656af0e2"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -22,10 +23,17 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ]
           },
           "configurations": {
