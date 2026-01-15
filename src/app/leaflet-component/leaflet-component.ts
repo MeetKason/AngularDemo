@@ -9,7 +9,7 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { FormsModule } from '@angular/forms';
 import * as turf from '@turf/turf';
 import { WeatherStateService } from '../../unit/WeatherStateService';
-import 'leaflet-velocity/dist/leaflet-velocity';
+import 'leaflet-velocity';
 import wind from './wind-global.json';
 import { CommonModule } from '@angular/common';
 const cloudImgUrl = 'assets/image/cloud-image.png';
